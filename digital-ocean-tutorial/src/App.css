@@ -1,38 +1,59 @@
-.App {
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: pastelPink;
+}
+
+.app {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.counter {
+  margin-top: 20px;
+  font-size: 24px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.counter-value {
+  background-color: #ffc0cb; /* Lighter pink */
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.counter-value.fibonacci {
+  background-color: #ff69b4; /* Hot pink */
+}
+
+.approaching-alert,
+.threshold-exceeded {
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.approaching-alert {
+  background-color: #ffabab; /* Light coral */
+}
+
+.threshold-exceeded {
+  background-color: #ff3333; /* Red */
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4b0082; /* Indigo */
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:disabled {
+  background-color: #a9a9a9; /* Dark gray */
+  cursor: not-allowed;
 }
