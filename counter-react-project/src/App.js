@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import goalImage from './goal.png';
 
 const App = () => {
   const [counter, setCounter] = useState(0);
@@ -60,7 +59,6 @@ const App = () => {
 
   useEffect(() => {
     setIsFibonacci(fibonacciCheck(counter));
-    const threshold = 13;
 
     if(isThreshold(counter + 3)){
       setIsApproachingThreshold(true);
@@ -105,11 +103,6 @@ const App = () => {
           Threshold exceeded! Cannot increment further.
         </div>
       )}
-      <div className="progress-bar">
-        <div className="goal-container" style={{ left: `${goalPosition}%` }}>
-          <img src={goalImage} alt="goal" className="goal" />
-        </div>
-      </div>
       <button onClick={incrementCounter} disabled={isThresholdExceeded}>
         Increment
       </button>
